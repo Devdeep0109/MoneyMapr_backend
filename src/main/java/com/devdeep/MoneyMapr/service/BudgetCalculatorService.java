@@ -1,9 +1,7 @@
-package com.devdeep.MoneyMapr.Service;
+package com.devdeep.MoneyMapr.service;
 
 import com.devdeep.MoneyMapr.dto.BudgetStatus;
-import com.devdeep.MoneyMapr.model.ElaborateData;
 import com.devdeep.MoneyMapr.model.MonthlyExpenseData;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

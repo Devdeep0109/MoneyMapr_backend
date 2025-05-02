@@ -1,4 +1,4 @@
-package com.devdeep.MoneyMapr.Service;
+package com.devdeep.MoneyMapr.service;
 
 import com.devdeep.MoneyMapr.model.CIData;
 import org.springframework.stereotype.Service;

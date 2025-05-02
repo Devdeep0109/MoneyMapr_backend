@@ -1,8 +1,7 @@
 package com.devdeep.MoneyMapr.controller;
 
-import com.devdeep.MoneyMapr.service.BudgetCalculatorService;
-import com.devdeep.MoneyMapr.dto.BudgetStatus;
-import com.devdeep.MoneyMapr.model.MonthlyExpenseData;
+import java.util.*;
+import com.devdeep.MoneyMapr.model.CarData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -10,18 +9,21 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import com.devdeep.MoneyMapr.service.CarAffordabilityService;
+
 
 @CrossOrigin(origins = "http://localhost:5173/")
 @RestController
-public class BudgetController {
+public class carAffordabilityController {
 
     @Autowired
-    public BudgetCalculatorService service;
+    public CarAffordabilityService service;
 
-    @PostMapping("/api/budget-calculation")
-    public ResponseEntity<BudgetStatus> budgetCalculate(@RequestBody MonthlyExpenseData monthlyExpenseData){
+    @PostMapping("/api/newcar")
+    public ResponseEntity<List<Double>> carAffordability(@RequestBody CarData carData){
 
-        BudgetStatus response = service.calculateBudget(monthlyExpenseData);
+        List<Double> response = service.checkCarAffordability(carData);
+        System.out.println(response);
         return new ResponseEntity<>(response, HttpStatusCode.valueOf(200));
     }
 }

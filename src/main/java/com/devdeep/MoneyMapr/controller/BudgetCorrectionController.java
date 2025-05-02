@@ -1,6 +1,6 @@
 package com.devdeep.MoneyMapr.controller;
 
-import com.devdeep.MoneyMapr.Service.BudgetCorrectionService;
+import com.devdeep.MoneyMapr.service.BudgetCorrectionService;
 import com.devdeep.MoneyMapr.dto.BudgetCorrectionData;
 import com.devdeep.MoneyMapr.model.ElaborateData;
 import org.springframework.beans.factory.annotation.Autowired;

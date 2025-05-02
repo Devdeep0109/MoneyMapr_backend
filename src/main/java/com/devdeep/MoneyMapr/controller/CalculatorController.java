@@ -1,7 +1,6 @@
 package com.devdeep.MoneyMapr.controller;
 
-import com.devdeep.MoneyMapr.MoneyMaprApplication;
-import com.devdeep.MoneyMapr.Service.CICalculatorService;
+import com.devdeep.MoneyMapr.service.CICalculatorService;
 import com.devdeep.MoneyMapr.model.CIData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
